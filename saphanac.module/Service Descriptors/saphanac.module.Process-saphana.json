@@ -1,0 +1,480 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/saphana" : {
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-saphana",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a A_Product_GET_Responses to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/A_Product_GET_Responses"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "to_ProductQualityMgmt" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "string"
+        },
+        "QltyMgmtInProcmtIsActive" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "A_Product_GET_Responses" : {
+      "type" : "object",
+      "properties" : {
+        "Output" : {
+          "$ref" : "#/definitions/Output"
+        }
+      }
+    },
+    "to_Description" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_ProductPurchaseText" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_ProductSalesTax" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_ProductBasicText" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_ProductSales" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "string"
+        },
+        "SalesStatus" : {
+          "type" : "string"
+        },
+        "SalesStatusValidityDate" : {
+          "type" : "string"
+        },
+        "TaxClassification" : {
+          "type" : "string"
+        },
+        "TransportationGroup" : {
+          "type" : "string"
+        }
+      }
+    },
+    "to_SalesDelivery" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_Valuation" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_ProductStorage" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "string"
+        },
+        "StorageConditions" : {
+          "type" : "string"
+        },
+        "TemperatureConditionInd" : {
+          "type" : "string"
+        },
+        "HazardousMaterialNumber" : {
+          "type" : "string"
+        },
+        "NmbrOfGROrGISlipsToPrintQty" : {
+          "type" : "string"
+        },
+        "LabelType" : {
+          "type" : "string"
+        },
+        "LabelForm" : {
+          "type" : "string"
+        },
+        "MinRemainingShelfLife" : {
+          "type" : "string"
+        },
+        "ExpirationDate" : {
+          "type" : "string"
+        },
+        "BaseUnit" : {
+          "type" : "string"
+        }
+      }
+    },
+    "to_ProductUnitsOfMeasure" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_Plant" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "Output" : {
+      "type" : "object",
+      "properties" : {
+        "ResultCount" : {
+          "type" : "integer"
+        },
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "to_ProductProcurement" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "string"
+        },
+        "PurchaseOrderQuantityUnit" : {
+          "type" : "string"
+        },
+        "VarblPurOrdUnitStatus" : {
+          "type" : "string"
+        },
+        "PurchasingAcknProfile" : {
+          "type" : "string"
+        }
+      }
+    },
+    "to_ProductInspectionText" : {
+      "type" : "object",
+      "properties" : {
+        "results" : {
+          "$ref" : "#/definitions/results"
+        }
+      }
+    },
+    "results" : {
+      "type" : "object",
+      "properties" : {
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/items",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "items" : {
+      "type" : "object",
+      "properties" : {
+        "Product" : {
+          "type" : "string"
+        },
+        "ProductType" : {
+          "type" : "string"
+        },
+        "CrossPlantStatus" : {
+          "type" : "string"
+        },
+        "CrossPlantStatusValidityDate" : {
+          "type" : "string"
+        },
+        "CreationDate" : {
+          "type" : "string"
+        },
+        "CreatedByUser" : {
+          "type" : "string"
+        },
+        "LastChangeDate" : {
+          "type" : "string"
+        },
+        "LastChangedByUser" : {
+          "type" : "string"
+        },
+        "LastChangeDateTime" : {
+          "type" : "string"
+        },
+        "IsMarkedForDeletion" : {
+          "type" : "boolean"
+        },
+        "ProductOldID" : {
+          "type" : "string"
+        },
+        "GrossWeight" : {
+          "type" : "string"
+        },
+        "PurchaseOrderQuantityUnit" : {
+          "type" : "string"
+        },
+        "SourceOfSupply" : {
+          "type" : "string"
+        },
+        "WeightUnit" : {
+          "type" : "string"
+        },
+        "NetWeight" : {
+          "type" : "string"
+        },
+        "CountryOfOrigin" : {
+          "type" : "string"
+        },
+        "CompetitorID" : {
+          "type" : "string"
+        },
+        "ProductGroup" : {
+          "type" : "string"
+        },
+        "BaseUnit" : {
+          "type" : "string"
+        },
+        "ItemCategoryGroup" : {
+          "type" : "string"
+        },
+        "ProductHierarchy" : {
+          "type" : "string"
+        },
+        "Division" : {
+          "type" : "string"
+        },
+        "VarblPurOrdUnitIsActive" : {
+          "type" : "string"
+        },
+        "VolumeUnit" : {
+          "type" : "string"
+        },
+        "MaterialVolume" : {
+          "type" : "string"
+        },
+        "ANPCode" : {
+          "type" : "string"
+        },
+        "Brand" : {
+          "type" : "string"
+        },
+        "ProcurementRule" : {
+          "type" : "string"
+        },
+        "ValidityStartDate" : {
+          "type" : "string"
+        },
+        "LowLevelCode" : {
+          "type" : "string"
+        },
+        "ProdNoInGenProdInPrepackProd" : {
+          "type" : "string"
+        },
+        "SerialIdentifierAssgmtProfile" : {
+          "type" : "string"
+        },
+        "SizeOrDimensionText" : {
+          "type" : "string"
+        },
+        "IndustryStandardName" : {
+          "type" : "string"
+        },
+        "ProductStandardID" : {
+          "type" : "string"
+        },
+        "InternationalArticleNumberCat" : {
+          "type" : "string"
+        },
+        "ProductIsConfigurable" : {
+          "type" : "boolean"
+        },
+        "IsBatchManagementRequired" : {
+          "type" : "boolean"
+        },
+        "ExternalProductGroup" : {
+          "type" : "string"
+        },
+        "CrossPlantConfigurableProduct" : {
+          "type" : "string"
+        },
+        "SerialNoExplicitnessLevel" : {
+          "type" : "string"
+        },
+        "ProductManufacturerNumber" : {
+          "type" : "string"
+        },
+        "ManufacturerNumber" : {
+          "type" : "string"
+        },
+        "ManufacturerPartProfile" : {
+          "type" : "string"
+        },
+        "QltyMgmtInProcmtIsActive" : {
+          "type" : "boolean"
+        },
+        "ChangeNumber" : {
+          "type" : "string"
+        },
+        "MaterialRevisionLevel" : {
+          "type" : "string"
+        },
+        "HandlingIndicator" : {
+          "type" : "string"
+        },
+        "WarehouseProductGroup" : {
+          "type" : "string"
+        },
+        "WarehouseStorageCondition" : {
+          "type" : "string"
+        },
+        "StandardHandlingUnitType" : {
+          "type" : "string"
+        },
+        "SerialNumberProfile" : {
+          "type" : "string"
+        },
+        "AdjustmentProfile" : {
+          "type" : "string"
+        },
+        "PreferredUnitOfMeasure" : {
+          "type" : "string"
+        },
+        "IsPilferable" : {
+          "type" : "boolean"
+        },
+        "IsRelevantForHzdsSubstances" : {
+          "type" : "boolean"
+        },
+        "QuarantinePeriod" : {
+          "type" : "string"
+        },
+        "TimeUnitForQuarantinePeriod" : {
+          "type" : "string"
+        },
+        "QualityInspectionGroup" : {
+          "type" : "string"
+        },
+        "AuthorizationGroup" : {
+          "type" : "string"
+        },
+        "HandlingUnitType" : {
+          "type" : "string"
+        },
+        "HasVariableTareWeight" : {
+          "type" : "boolean"
+        },
+        "MaximumPackagingLength" : {
+          "type" : "string"
+        },
+        "MaximumPackagingWidth" : {
+          "type" : "string"
+        },
+        "MaximumPackagingHeight" : {
+          "type" : "string"
+        },
+        "UnitForMaxPackagingDimensions" : {
+          "type" : "string"
+        },
+        "to_Description" : {
+          "$ref" : "#/definitions/to_Description"
+        },
+        "to_Plant" : {
+          "$ref" : "#/definitions/to_Plant"
+        },
+        "to_ProductBasicText" : {
+          "$ref" : "#/definitions/to_ProductBasicText"
+        },
+        "to_ProductInspectionText" : {
+          "$ref" : "#/definitions/to_ProductInspectionText"
+        },
+        "to_ProductProcurement" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/to_ProductProcurement",
+            "uniqueItems" : false
+          }
+        },
+        "to_ProductPurchaseText" : {
+          "$ref" : "#/definitions/to_ProductPurchaseText"
+        },
+        "to_ProductQualityMgmt" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/to_ProductQualityMgmt",
+            "uniqueItems" : false
+          }
+        },
+        "to_ProductSales" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/to_ProductSales",
+            "uniqueItems" : false
+          }
+        },
+        "to_ProductSalesTax" : {
+          "$ref" : "#/definitions/to_ProductSalesTax"
+        },
+        "to_ProductStorage" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/to_ProductStorage",
+            "uniqueItems" : false
+          }
+        },
+        "to_ProductUnitsOfMeasure" : {
+          "$ref" : "#/definitions/to_ProductUnitsOfMeasure"
+        },
+        "to_SalesDelivery" : {
+          "$ref" : "#/definitions/to_SalesDelivery"
+        },
+        "to_Valuation" : {
+          "$ref" : "#/definitions/to_Valuation"
+        }
+      }
+    }
+  }
+}

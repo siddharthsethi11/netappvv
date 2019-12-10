@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="__976ABJ4EeqMGs439MnZKQ" targetNamespace="http://tns.tibco.com/bw/composite/saphanac.module" name="saphanac.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_D0Vj0BJ5EeqMGs439MnZKQ" name="saphana" promote="ComponentProcess/saphana">
+    <sca:interface.wsdl xmi:id="_D0iYIBJ5EeqMGs439MnZKQ" interface="http://xmlns.example.com/20191129125232PLT#wsdl.interface(saphana)" scaext:wsdlLocation="../Processes/saphanac/module/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_D0xosBJ5EeqMGs439MnZKQ" name="RestService" path="/saphana" docBasePath="http://localhost:7777/saphanac.module" docResourcePath="saphana" basePath="/" connector="saphanac.module.saphana" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/saphanac.module.Process-saphana.json">
+      <operation xmi:id="_D06LkBJ5EeqMGs439MnZKQ" operationName="get" nickname="get-saphana" httpMethod="GET" responseStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_D1Z60BJ5EeqMGs439MnZKQ"/>
+      <advancedConfig xmi:id="_D03IQBJ5EeqMGs439MnZKQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_D06yoBJ5EeqMGs439MnZKQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_BU1bgBJ5EeqMGs439MnZKQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BVHvYBJ5EeqMGs439MnZKQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BVOdEBJ5EeqMGs439MnZKQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BVW_8BJ5EeqMGs439MnZKQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BVhYABJ5EeqMGs439MnZKQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_BVpT0BJ5EeqMGs439MnZKQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_RFsFIBJ5EeqMGs439MnZKQ" name="newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_RKz1sBJ5EeqMGs439MnZKQ" name="newProperty1" type="property:password" scaext:simpleValue="#!upSrvCVg95uBGhaMUZE1Tg==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_42-R0BKNEeq9b8qTMz47zw" name="TCI_BW_CONFIG_OVERRIDES" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_As0ZQBJ5EeqMGs439MnZKQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_As2OcBJ5EeqMGs439MnZKQ" processName="saphanac.module.Process"/>
+    <sca:service xmi:id="_D0OPEBJ5EeqMGs439MnZKQ" name="saphana">
+      <sca:interface.wsdl xmi:id="_D0PdMBJ5EeqMGs439MnZKQ" interface="http://xmlns.example.com/20191129125232PLT#wsdl.interface(saphana)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

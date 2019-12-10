@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:s4hanaconnection="http://ns.tibco.com/bw/sharedresource/s4hanaconnection" xmi:id="_Gle1wRJ5EeqMGs439MnZKQ" name="saphanac.module.S4hanaconnectionResource" type="s4hanaconnection:S4Connection">
+  <jndi:configuration xsi:type="s4hanaconnection:S4Connection" xmi:id="_Glh5EBJ5EeqMGs439MnZKQ" hubUrl="https://api.sap.com" hubUserName="adatla@tibco.com" hubPassword="#!2bfkugy3MKq73RPaL/HSKSgbeuBULO9cUz2ohoZ2hOY=" threadNum="8"/>
+</jndi:namedResource>
